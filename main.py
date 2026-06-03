@@ -6,7 +6,7 @@ data = [
     ["2026-01-05", "SKU1", "WarehouseB", "Inbound", 50]
 ]
 
-df=pd.DataFrame(data, columns=["Date", "SKU", "Location", "Movement", "qty"])
+df=pd.read_csv("inventory.csv")
 df["Date"]=pd.to_datetime(df["Date"])
 
 today = pd.Timestamp.today()
